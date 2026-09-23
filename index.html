@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ProMan - Personal Portfolio HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/premium.css" rel="stylesheet">
+    <script>
+        (function () {
+            var savedTheme = localStorage.getItem('portfolio-theme');
+            var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme || systemTheme);
+        })();
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Portfolio</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
+            </div>
+            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">Portfolio</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <button type="button" class="theme-toggle nav-link" id="themeToggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+                    <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
+        <div class="container">
+            <div class="row g-0 align-items-center">
+                <div class="col-7 col-lg-6 hero-text-col py-lg-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-1 mb-sm-2 mb-lg-3">I'm</h3>
+                    <h1 class="display-3 mb-1 mb-sm-2 mb-lg-3">Abdullah Ali Sheikh</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">MERN Stack Developer</div>
+                    <div class="d-flex align-items-center flex-wrap pt-2 pt-sm-3 pt-lg-4 hero-cta-wrapper">
+                        <a href="https://github.com/AbdullahAliSheikh-1111/latestresume" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-2 px-3 py-sm-3 px-sm-4 me-sm-4 me-0">Download Resume</a>
+                    </div>
+                </div>
+                <div class="col-5 col-lg-6 hero-img-col">
+                    <img class="img-fluid" src="img/profile4.png.png" alt="Abdullah Ali Sheikh">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="display-5 fw-bold text-dark lh-base mb-4">Freelance MERN Developer, CS Student</h3>
+                    <p class="mb-4">I'm a third-year Computer Science student and MERN Stack developer who's spent the last year building - not just learning theory. From a full-stack room rental marketplace to client-style projects, I focus on writing clean, functional code and shipping things that actually work in production, not just in a tutorial.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Clean &amp; Efficient Code</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Real-World Problem Solving</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On-Time Delivery</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Client-Focused Approach</p>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-12">
+                            <img class="img-fluid rounded about-feature-image" src="img/about-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="about-stat-item d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Built</h5>
+                        <h2 class="text-primary fw-bold mb-0"><span data-toggle="counter-up">6</span>+</h2>
+                    </div>
+                    <p class="mb-4">From full-stack marketplaces to client websites - each one deployed live, not left as a local build.</p>
+                    <div class="about-stat-item d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Year of Hands-On Development</h5>
+                        <h2 class="text-primary fw-bold mb-0"><span data-toggle="counter-up">1</span>+</h2>
+                    </div>
+                    <p class="mb-0">Continuously learning and shipping - React, Node.js, MongoDB, and real deployment experience via Vercel and Cloudflare Workers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <p class="mb-4">A practical stack built through hands-on projects, client work, and continuous learning in full-stack engineering.</p>
+                    <h3 class="mb-4">My Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">React</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">JavaScript</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML &amp; CSS</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Node.js &amp; Express.js</h6>
+                                    <h6 class="font-weight-bold">75%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">MongoDB &amp; MySQL</h6>
+                                    <h6 class="font-weight-bold">75%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">C++</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Git &amp; GitHub</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>MERN Stack Developer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2025 - Present</p>
+                                    <h6 class="mb-0">Self-employed</h6>
+                                    <p class="mt-2 mb-0">Building full-stack web apps for clients and personal projects, including a room rental marketplace and a business portfolio site, using React, Node.js, and MongoDB.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Client Outreach &amp; MERN Stack Developer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2025 - Present</p>
+                                    <h6 class="mb-0">NexKode</h6>
+                                    <p class="mt-2 mb-0">Handling client outreach and lead generation while contributing as a MERN Stack developer for a tech solutions agency co-founded by my brother.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Frontend Development Mentee</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2026</p>
+                                    <h6 class="mb-0">Dev Weekends Fellowship (Pathment)</h6>
+                                    <p class="mt-2 mb-0">Selected for a fellowship covering React architecture, routing, and state management, mentored by Sir Ahad Ali.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Bachelor's in Computer Science</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2024 - 2028</p>
+                                    <h6 class="mb-0">University of Lahore</h6>
+                                    <p class="mt-2 mb-0">Currently in 2nd year, CGPA 3.85. Coursework and self-study focused on web development, data structures, and full-stack engineering.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Dev Weekends Fellowship</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2026</p>
+                                    <h6 class="mb-0">Pathment / Sir Ahad Ali</h6>
+                                    <p class="mt-2 mb-0">Selected fellowship focused on frontend engineering, including React architecture, routing, and state management with Context API and Redux Toolkit.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Volunteer - Society of Contemporary Thoughts</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2025 - Present</p>
+                                    <h6 class="mb-0">University of Lahore</h6>
+                                    <p class="mt-2 mb-0">Contributed to planning and executing university events; managed registration and event logistics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-4 g-lg-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5 mt-2 mt-lg-0" href="#contact">Hire Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Full-Stack Web Development</h4>
+                            <span>End-to-end web apps built with the MERN stack - from database design to a deployed, working product. Like Room Radar: auth, storage, admin features, and live hosting, not just a static UI.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code-branch fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Frontend Development (React)</h4>
+                            <span>Responsive, clean React interfaces - component-based, fast, and built to match your brand rather than a generic template.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Business/Portfolio Websites</h4>
+                            <span>Client-ready websites for small businesses and personal brands - like the homeopathic clinic site - designed to build credibility and convert visitors.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web App Maintenance &amp; Fixes</h4>
+                            <span>Bug fixes, feature additions, and performance improvements on existing React/Node apps - useful for clients who already have a site but need ongoing help.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-11.png" alt="Al-Sheikh Homeopathic Clinic">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-11.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://al-sheikh-lac.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info pt-3">
+                        <h5 class="mb-2">Al-Sheikh Homeopathic Clinic</h5>
+                        <p class="mb-0">A professional portfolio website for a homeopathic clinic, built with React to showcase services and build patient trust online.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-22.png" alt="Barakah Calendar">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-22.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://barakah-calendar-main.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info pt-3">
+                        <h5 class="mb-2">Barakah Calendar</h5>
+                        <p class="mb-0">A Full Stack web app highlighting Islamic holy days with recommended actions and educational insights based on the Quran and Sunnah.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-33.png" alt="Room Radar">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-33.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://find-your-cozy-space.roomradar.workers.dev/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info pt-3">
+                        <h5 class="mb-2">Room Radar</h5>
+                        <p class="mb-0">A full-stack room rental marketplace built with React and Supabase, featuring authentication, boosted listings, and admin moderation, deployed live via Cloudflare Workers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.png" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-1.png" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.png" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Abdullah built our clinic's website from scratch, and it completely changed how patients find and reach us. He took the time to understand what a homeopathic practice actually needs - simple navigation, clear information about our services, and a professional look that builds trust before a patient even walks in. He was responsive, detail-oriented, and delivered exactly what we needed on time.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Dr. Shagufta Ali Sheikh</h5>
+                            <span>Al-Sheikh Homeopathic Clinic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.png" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-1.png" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-12">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+            </div>
+            <div class="row g-5 justify-content-center text-center">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">03258095338</h3>
+                    <hr class="w-50 mx-auto">
+                    <p class="mb-2">WhatsApp:</p>
+                    <h3 class="fw-bold"><a href="https://wa.me/923258095338" target="_blank" rel="noopener noreferrer" class="text-reset text-decoration-none">03258095338</a></h3>
+                    <hr class="w-50 mx-auto">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">abdullahalisheikh2107@gmail.com</h3>
+                    <hr class="w-50 mx-auto">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex justify-content-center pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/abdullah-ali-sheikh-0a88033b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://wa.me/923258095338" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 text-secondary">
+                        &copy; Abdullah Ali Sheikh, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-secondary">
+                        Designed &amp; Developed by <a class="border-bottom text-secondary" href="index.html">Abdullah Ali Sheikh</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
